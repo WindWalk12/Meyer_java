@@ -1,4 +1,5 @@
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.geometry.Pos;
 import javafx.scene.layout.HBox;
@@ -38,8 +39,25 @@ public class Gui extends Application {
         rollButton.setDefaultButton(true);
         rollButton.setMaxSize(200, 50);
         rollButton.setTextAlignment(TextAlignment.CENTER);
-        rollButton.setAlignment(Pos.BOTTOM_CENTER);
+        rollButton.setLayoutX(230);
+        rollButton.setLayoutY(300);
         root.getChildren().add(rollButton);
+        rollButton.setOnAction((event) -> {
+            d1.roll();
+            d2.roll();
+            start(stage);
+        });
+
+        Button HideButton = new Button("Hide");
+        HideButton.setDefaultButton(true);
+        HideButton.setMaxSize(200, 50);
+        HideButton.setTextAlignment(TextAlignment.CENTER);
+        HideButton.setLayoutX(270);
+        HideButton.setLayoutY(300);
+        root.getChildren().add(HideButton);
+        HideButton.setOnAction((event) -> {
+            // Does nothing yet
+        });
     }
 
     private Pane initContent() {
@@ -161,6 +179,5 @@ public class Gui extends Application {
             pane.getChildren().add(eye14);
             eye14.setFill(Color.BLACK);
         }
-
     }
 }
