@@ -5,7 +5,6 @@ public class Die {
 
     public Die () {
         roll();
-
     }
 
     public void roll() {
