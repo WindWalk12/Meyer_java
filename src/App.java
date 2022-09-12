@@ -9,7 +9,7 @@ public class App {
             System.out.println("Du har slået lille Meyer");
         }
         else if (d1.getEyes() == d2.getEyes()) {
-            System.out.println("Du har slået par " + d1.getEyes() + d2.getEyes());
+            System.out.println("Du har slået par " + d1.getEyes());
         }
         else {
             System.out.println("Du har slået " + Math.max(d1.getEyes(), d2.getEyes()) + Math.min(d1.getEyes(), d2.getEyes()));
