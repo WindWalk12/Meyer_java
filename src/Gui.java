@@ -12,6 +12,7 @@ import javafx.scene.shape.Line;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
 
@@ -31,11 +32,12 @@ public class Gui extends Application {
         stage.setScene(scene);
         stage.show();
 
-        Button rollButton = new Button();
+        Button rollButton = new Button("Roll");
         rollButton.setDefaultButton(true);
-
+        rollButton.setMaxSize(200, 50);
+        rollButton.setTextAlignment(TextAlignment.CENTER);
+        rollButton.setAlignment(Pos.BOTTOM_CENTER);
         root.getChildren().add(rollButton);
-        root.setAlignment(Pos.CENTER);
     }
 
     private Pane initContent() {
